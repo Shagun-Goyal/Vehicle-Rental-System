@@ -64,7 +64,7 @@ Enter your choice: _
       <li>GPS & online payments (like ZoomCar, Turo, Ola Rentals)</li>
     </ul>
     <h2>🙋 Author</h2>
-    <p><b>Your Name</b> – B.Tech Student, [Your College Name]</p>
+    <p><b>Your Name</b> – B.Tech Student, [Manav Rachna Institute]</p>
   </div>
 
   <footer>
