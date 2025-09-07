@@ -73,8 +73,8 @@
   <div class="container">
     <h2>📌 Overview</h2>
     <p>
-      The <b>Vehicle Rental System</b> is a C++ mini-project developed using
-      <b>Object-Oriented Programming (OOP)</b> concepts. It simulates a real-world
+      The Vehicle Rental System is a C++ mini-project developed using
+      Object-Oriented Programming (OOP) concepts. It simulates a real-world
       rental service where customers can rent cars or bikes, and the system manages
       availability, calculates rent, and stores rental history.
     </p>
