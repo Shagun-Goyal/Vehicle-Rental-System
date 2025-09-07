@@ -1,12 +1,10 @@
-# Vehicle-Rental-System
 <!DOCTYPE html>
 <html lang="en">
-<header>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vehicle Rental System - C++ Project</title>
-</header>
-    <style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background: #f5f7fa;
@@ -63,6 +61,7 @@
       font-size: 12px;
     }
   </style>
+</head>
 <body>
 
   <header>
