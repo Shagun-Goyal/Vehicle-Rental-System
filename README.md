@@ -78,7 +78,6 @@
       rental service where customers can rent cars or bikes, and the system manages
       availability, calculates rent, and stores rental history.
     </p>
-
     <h2>🎯 Features</h2>
     <ul>
       <li><b>Vehicle Management</b> – Add, display, and track vehicles</li>
@@ -87,7 +86,6 @@
       <li><b>File Handling</b> – Save rental history in text files</li>
       <li><b>Optional</b> – Late fees, search, billing</li>
     </ul>
-
     <h2>🛠️ Technologies Used</h2>
     <ul>
       <li>Language: C++</li>
@@ -95,7 +93,6 @@
       <li>Storage: File Handling</li>
       <li>UI: Console-based (Menu-driven)</li>
     </ul>
-
     <h2>🏗️ Class Structure</h2>
     <ul>
       <li><b>Vehicle (Abstract Class)</b></li>
@@ -103,7 +100,6 @@
       <li><b>Customer</b></li>
       <li><b>RentalSystem</b></li>
     </ul>
-
     <h2>📊 Project Flow</h2>
     <ol>
       <li>Admin adds vehicles</li>
@@ -112,7 +108,6 @@
       <li>Customer rents a vehicle</li>
       <li>Record saved in file</li>
     </ol>
-
     <h2>📷 Sample Console Screen</h2>
     <pre>
 ===============================
@@ -124,7 +119,6 @@
 4. Exit
 Enter your choice: _
     </pre>
-
     <h2>🌍 Future Scope</h2>
     <ul>
       <li>GUI integration with Qt or SFML</li>
@@ -132,7 +126,6 @@ Enter your choice: _
       <li>Web-based booking system</li>
       <li>GPS & online payments (like ZoomCar, Turo, Ola Rentals)</li>
     </ul>
-
     <h2>🙋 Author</h2>
     <p><b>Your Name</b> – B.Tech Student, [Your College Name]</p>
   </div>
