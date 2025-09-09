@@ -11,9 +11,8 @@ class access {
         cout << "Who you are" << endl << "1. Admin" << endl << "2. Customer" << endl << "Enter Here: ";
         cin >> temp;
         this-> registeredAs = temp;
-        cout << registeredAs << endl;
     }
-    void checking(){
+    void Sizing(){
         int n = registeredAs.size();
         for(int i = 0; i < n; i++){
             int temp = registeredAs[i];
@@ -21,7 +20,12 @@ class access {
                 registeredAs[i] = registeredAs[i] - 65 + 97;
             }
         }
-        cout << registeredAs;
+    }
+    void checking(){
+        if(registeredAs == "admin")
+
+        else
+
     }
 };
 int main (){
@@ -44,7 +48,7 @@ int main (){
     }
     cout << endl;
     access accessManager;
+    accessManager.Sizing();
     accessManager.checking();
-    
 
 }
