@@ -1,8 +1,24 @@
 #include <iostream>
 using namespace std;
 
-// Shows which type of user getting in
-class access {
+//Class For Admin Login(Idea: Can include the booking for the admin in low costs)
+class adminClass{
+
+};
+
+//Class for registeration as customer
+class customerClass{
+    public:
+    void categoryChoose(){
+        cout << endl << "Select filter to choose your Ride(TYPE THE NUMBER IN FRONT OF OPTIONS)" << endl;
+        cout << "1. Budget:" << endl << "2. Seats:" << endl << "3. Luxury:" << endl << "4. Car type:" << endl;
+        int categoryTemp;
+        //cin >> 
+    }
+};
+
+//Shows which type of user getting in
+class access{
     string registeredAs;
     public:
     access(){
@@ -11,9 +27,8 @@ class access {
         cout << "Who you are" << endl << "1. Admin" << endl << "2. Customer" << endl << "Enter Here: ";
         cin >> temp;
         this-> registeredAs = temp;
-        cout << registeredAs << endl;
     }
-    void checking(){
+    void Sizing(){
         int n = registeredAs.size();
         for(int i = 0; i < n; i++){
             int temp = registeredAs[i];
@@ -21,9 +36,23 @@ class access {
                 registeredAs[i] = registeredAs[i] - 65 + 97;
             }
         }
-        cout << registeredAs;
+    }
+    void checking(){
+        if(registeredAs == "admin"){
+            adminClass login;
+        }
+
+        else if(registeredAs == "customer"){
+            customerClass choosing;
+            choosing.categoryChoose();
+        }
+
+        else{
+            cout << "Not Registered access" << endl;
+        }
     }
 };
+
 int main (){
     cout << endl;
     for(int i = 0; i < 64; i++){
@@ -44,7 +73,7 @@ int main (){
     }
     cout << endl;
     access accessManager;
+    accessManager.Sizing();
     accessManager.checking();
-    
 
 }
