@@ -1,8 +1,25 @@
 #include <iostream>
 using namespace std;
 
-// Shows which type of user getting in
-class access {
+//Class For Admin Login(Idea: Can include the booking for the admin in low costs)
+class adminClass{
+
+};
+
+//Class for registeration as customer
+class customerClass{
+    public:
+    void categoryChoose(){
+        cout << endl << "Select filter to choose your Ride(TYPE THE NUMBER IN FRONT OF OPTIONS)" << endl;
+        cout << "1. Budget:" << endl << "2. Seats:" << endl << "3. Luxury:" << endl << "4. Car type:" << endl;
+        int categoryTemp
+        cin >> 
+    }
+    void 
+};
+
+//Shows which type of user getting in
+class access{
     string registeredAs;
     public:
     access(){
@@ -22,12 +39,21 @@ class access {
         }
     }
     void checking(){
-        if(registeredAs == "admin")
+        if(registeredAs == "admin"){
+            adminClass login;
+        }
 
-        else
+        else if(registeredAs == "customer"){
+            customerClass choosing;
+            choosing.categoryChoose();
+        }
 
+        else{
+            cout << "Not Registered access" << endl;
+        }
     }
 };
+
 int main (){
     cout << endl;
     for(int i = 0; i < 64; i++){
