@@ -12,10 +12,9 @@ class customerClass{
     void categoryChoose(){
         cout << endl << "Select filter to choose your Ride(TYPE THE NUMBER IN FRONT OF OPTIONS)" << endl;
         cout << "1. Budget:" << endl << "2. Seats:" << endl << "3. Luxury:" << endl << "4. Car type:" << endl;
-        int categoryTemp
-        cin >> 
+        int categoryTemp;
+        //cin >> 
     }
-    void 
 };
 
 //Shows which type of user getting in
