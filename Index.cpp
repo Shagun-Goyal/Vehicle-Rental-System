@@ -11,9 +11,28 @@ class customerClass{
     public:
     void categoryChoose(){
         cout << endl << "Select filter to choose your Ride(TYPE THE NUMBER IN FRONT OF OPTIONS)" << endl;
-        cout << "1. Budget:" << endl << "2. Seats:" << endl << "3. Luxury:" << endl << "4. Car type:" << endl;
+        cout << "1. Budget:" << endl << "2. Seats:" << endl << "3. Luxury:" << endl << "4. Car type:" << endl << "Enter the number of filter: ";
         int categoryTemp;
-        //cin >> 
+        cin >> categoryTemp;
+        switch (categoryTemp){
+        case 1:
+            int budgetTemp;
+            cin >> budgetTemp;
+
+            break;
+        case 2:
+            int seatsTemp;
+            cin >> seatsTemp;
+            break;
+        case 3:
+            cout << "There are three types of luxury: " << endl << "1. Premium" << endl << "2. Moderate" << endl << "3. Low" << endl << "Enter the number of the luxury: ";
+            int luxury;
+            cin >> luxury;
+            break;
+        default:
+            break;
+        }
+
     }
 };
 
