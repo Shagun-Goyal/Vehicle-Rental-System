@@ -6,6 +6,11 @@ class adminClass{
 
 };
 
+//class for the searchings of cars.
+class searchingClass{
+    
+};
+
 //Class for registeration as customer
 class customerClass{
     public:
