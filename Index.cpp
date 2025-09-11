@@ -14,11 +14,11 @@ class customerClass{
         cout << "1. Budget:" << endl << "2. Seats:" << endl << "3. Luxury:" << endl << "4. Car type:" << endl << "Enter the number of filter: ";
         int categoryTemp;
         cin >> categoryTemp;
+
         switch (categoryTemp){
         case 1:
             int budgetTemp;
             cin >> budgetTemp;
-
             break;
         case 2:
             int seatsTemp;
@@ -29,7 +29,12 @@ class customerClass{
             int luxury;
             cin >> luxury;
             break;
+        case 4:
+            cout << "We have three types of car: " << endl << "1. SUV" << endl << "2. Sedan" << endl << "3. Convertible" << endl << "Enter your number of choise: " ;
+            int carType;
+            cin >> carType;
         default:
+            cout << "Sorry we are still Working on more categories" << endl;
             break;
         }
 
