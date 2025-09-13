@@ -26,13 +26,13 @@ class data{
         carsInfo ToyotaFortuner = {"suv", "premium", 6500, 7};
         carsInfo MGGloster = {"suv", "premium", 6200, 7};
         carsInfo MahindraXuv700 = {"suv", "moderate", 5500, 7};
-        carsInfo KiaSeltos = {"suv", "premium", 3800, 5};
-        carsInfo SkodaOctavia = {"suv", "premium", 3800, 5};
-        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
-        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
-        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
-        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
-        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
+        carsInfo KiaSeltos = {"suv", "moderate", 4800, 5};
+        carsInfo HyundaiCreta = {"suv", "low", 4500, 5};
+        carsInfo MercedesBenz = {"convertible", "premium", 14000, 4};
+        carsInfo AudiA5 = {"convertible", "premium", 13500, 4};
+        carsInfo BMWZ4 = {"convertible", "moderate", 12000, 2};
+        carsInfo MiniCooper = {"convertible", "low", 10500, 4};
+        carsInfo FordMustang = {"convertible", "moderate", 11500, 4};
     }
 
 
