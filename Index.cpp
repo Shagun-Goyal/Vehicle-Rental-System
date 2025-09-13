@@ -1,15 +1,46 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
+struct carsInfo{
+    string carType;
+    string luxury;
+    int cost;
+    int seats;
+}
 //Class For Admin Login(Idea: Can include the booking for the admin in low costs)
 class adminClass{
 
 };
 
-//class for the searchings of cars.
-class searchingClass{
-    
+class data{
+    string category[3];
+
+    public:
+    data() {
+        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
+        carsInfo ToyotaCamry = {"sedan", "Moderate", 3500, 5};
+        carsInfo HondaCivic = {"sedan", "moderate", 3200, 5};
+        carsInfo HyundaiElantra = {"sedan", "low", 3000, 5};
+        carsInfo MarutiSuzukiciaz = {"sedan", "low", 2800, 5};
+        carsInfo ToyotaFortuner = {"suv", "premium", 6500, 7};
+        carsInfo MGGloster = {"suv", "premium", 6200, 7};
+        carsInfo MahindraXuv700 = {"suv", "moderate", 5500, 7};
+        carsInfo KiaSeltos = {"suv", "premium", 3800, 5};
+        carsInfo SkodaOctavia = {"suv", "premium", 3800, 5};
+        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
+        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
+        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
+        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
+        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
+    }
+
+
 };
+//class for the searchings of cars.
+// class searchingClass{
+    
+// };
 
 //Class for registeration as customer
 class customerClass{
