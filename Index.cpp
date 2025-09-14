@@ -48,7 +48,7 @@ class searchingClass{
         int high=0;
         while (i < 15){
         if(cost == costArr[i]){
-        //Have to return the all info about the related car 
+        //Have to dvelop to that condition where it return the all info about the related car if the user give the budget
             actualCost = costArr[i];
             cout << "There your's car info related to your budget: " << actualCost << endl;
             break;
@@ -74,6 +74,14 @@ class searchingClass{
         if(actualCost == 0)
             cout << "printing low: " << low << endl << "printing high: " << high << endl;
     }
+
+    void seats(int seats){
+
+        int seatsArr[] = {5,5,5,5,5,7,7,7,5,5,4,4,2,4,4};
+        vector<int> temp;
+        int i = 0;
+        
+    }
 };
 
 //Class for registeration as customer
@@ -90,8 +98,8 @@ class customerClass{
             int budgetTemp;
             cout << "Enter the budget that you have: ";
             cin >> budgetTemp;
-            searchingClass a;
-            a.budget(budgetTemp);
+            searchingClass b;
+            b.budget(budgetTemp);
 
 
 
@@ -99,9 +107,10 @@ class customerClass{
             break;
         case 2:
             int seatsTemp;
+            cout << "Enter the budget that you have: ";
             cin >> seatsTemp;
-            //searchingClass a;
-          //  a.seats(seatsTemp);
+            searchingClass s;
+            s.seats(seatsTemp);
 
 
             break;
