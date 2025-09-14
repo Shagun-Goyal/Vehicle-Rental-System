@@ -76,11 +76,69 @@ class searchingClass{
     }
 
     void seats(int seats){
-
         int seatsArr[] = {5,5,5,5,5,7,7,7,5,5,4,4,2,4,4};
-        vector<int> temp;
-        int i = 0;
-        
+        vector<int> Temp;
+        vector<int> tempLow;
+        vector<int> tempHigh;
+        int temp = 0;
+        int templow;
+        int temphigh;
+        for (int i = 0; i < 15; i++){
+            if(seats == seatsArr[i]){
+                temp = seatsArr[i];
+            }
+            else if(seats < seatsArr[i]){
+                int trial = 0;
+                if (trial == 0){
+                    temphigh = seatsArr[i];
+                    trial++;
+                }
+                else if(temphigh > seatsArr[i]){
+                    temphigh = seatsArr[i];
+                }
+            }
+            else if(seats > seatsArr[i]){
+                int trial = 0;
+                if(trial == 0){
+                    templow = seatsArr[i];
+                    trial++;
+                }
+                else if(templow < seatsArr[i]){
+                    templow = seatsArr[i];
+                }
+            }
+        }
+        for(int i = 0; i < 15; i++){
+            if(temp != 0){
+                if(temp == seatsArr[i]){
+                Temp.push_back(i);
+                }
+            }
+            else{
+                if(templow == seatsArr[i]){
+                    tempLow.push_back(i);
+                }
+                else if(temphigh == seatsArr[i]){
+                    tempHigh.push_back(i);
+                }
+            }
+        }
+        if(temp != 0){
+            int n = Temp.size();
+            for(int i = 0; i < n; i++){
+                cout << "Temp: "<< Temp[i] << endl;
+            }
+        }
+        else{
+            int n = tempLow.size();
+            int j = tempHigh.size();
+            for(int i = 0; i < j; i++){
+                    cout << "Temp high: " << tempHigh[i] << endl;
+            }
+            for(int i = 0; i < n; i++){
+                cout << "Temp low: " << tempHigh[i] << endl;
+            }
+        }
     }
 };
 
@@ -107,7 +165,7 @@ class customerClass{
             break;
         case 2:
             int seatsTemp;
-            cout << "Enter the budget that you have: ";
+            cout << "Enter the seats that you want: ";
             cin >> seatsTemp;
             searchingClass s;
             s.seats(seatsTemp);
