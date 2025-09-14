@@ -7,7 +7,7 @@ struct carsInfo{
     string luxury;
     int cost;
     int seats;
-}
+};
 //Class For Admin Login(Idea: Can include the booking for the admin in low costs)
 class adminClass{
 
@@ -40,13 +40,39 @@ class data{
 //class for the searchings of cars.
 class searchingClass{
     public:
-    int budget(int cost){
+    void budget(int cost){
         int costArr[] = {3800, 3500, 3200, 3000, 2800, 6500, 6200, 5500, 4800, 4500, 14000, 13500, 12000, 10500, 11500};
-       while (){
-        int low;
-        int high;
-        if(cost < )
-       } 
+        int i = 0;
+        int actualCost = 0;
+        int low=0;
+        int high=0;
+        while (i < 15){
+        if(cost == costArr[i]){
+        //Have to return the all info about the related car 
+            actualCost = costArr[i];
+            cout << "There your's car info related to your budget: " << actualCost << endl;
+            break;
+        }
+        else if(cost < costArr[i]){
+            if(high == 0){
+                high = costArr[i];
+            }
+            else if(high > costArr[i]){
+                high = costArr[i];
+            }
+        }
+        else{
+            if(low == 0){
+                low = costArr[i];
+            }
+            else if(low < costArr[i]){
+                low = costArr[i];
+            }
+        }
+        i++;
+        }
+        if(actualCost == 0)
+            cout << "printing low: " << low << endl << "printing high: " << high << endl;
     }
 };
 
@@ -62,6 +88,7 @@ class customerClass{
         switch (categoryTemp){
         case 1:
             int budgetTemp;
+            cout << "Enter the budget that you have: ";
             cin >> budgetTemp;
             searchingClass a;
             a.budget(budgetTemp);
@@ -73,8 +100,8 @@ class customerClass{
         case 2:
             int seatsTemp;
             cin >> seatsTemp;
-            searchingClass a;
-            a.seats(seatsTemp);
+            //searchingClass a;
+          //  a.seats(seatsTemp);
 
 
             break;
@@ -82,8 +109,8 @@ class customerClass{
             cout << "There are three types of luxury: " << endl << "1. Premium" << endl << "2. Moderate" << endl << "3. Low" << endl << "Enter the number of the luxury: ";
             int luxuryTemp;
             cin >> luxuryTemp;
-            searchingClass a;
-            a.luxury(luxuryTemp);
+            //searchingClass a;
+           // a.luxury(luxuryTemp);
 
 
             break;
@@ -91,8 +118,8 @@ class customerClass{
             cout << "We have three types of car: " << endl << "1. SUV" << endl << "2. Sedan" << endl << "3. Convertible" << endl << "Enter your number of choise: " ;
             int cartypeTemp;
             cin >> cartypeTemp;
-            searchingClass a;
-            a.carType(cartypetemp);
+            //searchingClass a;
+           // a.carType(cartypeTemp);
 
 
         default:
