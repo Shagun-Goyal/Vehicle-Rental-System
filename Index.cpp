@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "httplib.h"
 using namespace std;
 
 struct carsInfo{
@@ -136,8 +137,40 @@ class searchingClass{
                     cout << "Temp high: " << tempHigh[i] << endl;
             }
             for(int i = 0; i < n; i++){
-                cout << "Temp low: " << tempHigh[i] << endl;
+                cout << "Temp low: " << tempLow[i] << endl;
             }
+        }
+    }
+    void luxury(int luxury){
+        for (int i = 0; i < 3; i++){
+            if(luxury == 1){
+                cout << "Premium" << endl;
+                break;
+            }
+            else if(luxury == 2){
+                cout << "Moderate" << endl;
+                break;
+            }
+            else{
+                cout << "Low" << endl;
+                break;
+            }
+        }
+    }
+    void carType(int carstype){
+        for (int i = 0; i < 3; i++){
+           if(carstype == 1){
+                cout << "SUV" << endl;
+                break;
+            }
+            else if(carstype == 2){
+                cout << "Sedan" << endl;
+                break;
+            }
+            else{
+                cout << "Convertible" << endl;
+                break;
+            } 
         }
     }
 };
@@ -158,10 +191,6 @@ class customerClass{
             cin >> budgetTemp;
             searchingClass b;
             b.budget(budgetTemp);
-
-
-
-
             break;
         case 2:
             int seatsTemp;
@@ -169,26 +198,21 @@ class customerClass{
             cin >> seatsTemp;
             searchingClass s;
             s.seats(seatsTemp);
-
-
             break;
         case 3:
             cout << "There are three types of luxury: " << endl << "1. Premium" << endl << "2. Moderate" << endl << "3. Low" << endl << "Enter the number of the luxury: ";
             int luxuryTemp;
             cin >> luxuryTemp;
-            //searchingClass a;
-           // a.luxury(luxuryTemp);
-
-
+            searchingClass l;
+            l.luxury(luxuryTemp);
             break;
         case 4:
             cout << "We have three types of car: " << endl << "1. SUV" << endl << "2. Sedan" << endl << "3. Convertible" << endl << "Enter your number of choise: " ;
             int cartypeTemp;
             cin >> cartypeTemp;
-            //searchingClass a;
-           // a.carType(cartypeTemp);
-
-
+            searchingClass c;
+            c.carType(cartypeTemp);
+            break;
         default:
             cout << "Sorry we are still Working on more categories" << endl;
             break;
@@ -198,7 +222,7 @@ class customerClass{
 };
 
 //Shows which type of user getting in
-class access{
+class access {
     string registeredAs;
     public:
     access(){
@@ -255,5 +279,4 @@ int main (){
     access accessManager;
     accessManager.Sizing();
     accessManager.checking();
-
 }
