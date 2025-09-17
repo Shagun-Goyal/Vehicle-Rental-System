@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "httplib.h"
+//#include "httplib.h"
 using namespace std;
 
 struct carsInfo{
@@ -15,25 +15,31 @@ class adminClass{
 };
 
 class data{
-    string category[3];
+    vector<string> cars;
+    vector<string> forDisplay;
 
     public:
     data() {
-        carsInfo SkodaOctavia = {"sedan", "premium", 3800, 5};
-        carsInfo ToyotaCamry = {"sedan", "Moderate", 3500, 5};
-        carsInfo HondaCivic = {"sedan", "moderate", 3200, 5};
-        carsInfo HyundaiElantra = {"sedan", "low", 3000, 5};
-        carsInfo MarutiSuzukiciaz = {"sedan", "low", 2800, 5};
-        carsInfo ToyotaFortuner = {"suv", "premium", 6500, 7};
-        carsInfo MGGloster = {"suv", "premium", 6200, 7};
-        carsInfo MahindraXuv700 = {"suv", "moderate", 5500, 7};
-        carsInfo KiaSeltos = {"suv", "moderate", 4800, 5};
-        carsInfo HyundaiCreta = {"suv", "low", 4500, 5};
-        carsInfo MercedesBenz = {"convertible", "premium", 14000, 4};
-        carsInfo AudiA5 = {"convertible", "premium", 13500, 4};
-        carsInfo BMWZ4 = {"convertible", "moderate", 12000, 2};
-        carsInfo MiniCooper = {"convertible", "low", 10500, 4};
-        carsInfo FordMustang = {"convertible", "moderate", 11500, 4};
+        cars.push_back({"Skoda Octavia", "sedan", "premium", "3800", "5"});
+        cars.push_back({"Toyota Camry", "sedan", "moderate", "3500", "5"});
+        cars.push_back({"Honda Civic", "sedan", "moderate", "3200", "5"});
+        cars.push_back({"Hyundai Elantra", "sedan", "low", "3000", "5"});
+        cars.push_back({"Maruti Suzuki Ciaz", "sedan", "low", "2800", "5"});
+
+        cars.push_back({"Toyota Fortuner", "suv", "premium", "6500", "7"});
+        cars.push_back({"MG Gloster", "suv", "premium", "6200", "7"});
+        cars.push_back({"Mahindra XUV700", "suv", "moderate", "5500", "7"});
+        cars.push_back({"Kia Seltos", "suv", "moderate", "4800", "5"});
+        cars.push_back({"Hyundai Creta", "suv", "low", "4500", "5"});
+
+        cars.push_back({"Mercedes Benz C-Class Cabriolet", "convertible", "premium", "14000", "4"});
+        cars.push_back({"Audi A5 Cabriolet", "convertible", "premium", "13500", "4"});
+        cars.push_back({"BMW Z4", "convertible", "moderate", "12000", "2"});
+        cars.push_back({"Mini Cooper Convertible", "convertible", "low", "10500", "4"});
+        cars.push_back({"Ford Mustang Convertible", "convertible", "moderate", "11500", "4"});
+    }
+    data(int actualCost){
+        forDisplay.push_back
     }
 
 
@@ -52,6 +58,7 @@ class searchingClass{
         //Have to dvelop to that condition where it return the all info about the related car if the user give the budget
             actualCost = costArr[i];
             cout << "There your's car info related to your budget: " << actualCost << endl;
+            data(i);
             break;
         }
         else if(cost < costArr[i]){
@@ -72,8 +79,17 @@ class searchingClass{
         }
         i++;
         }
-        if(actualCost == 0)
+        if(actualCost == 0){
             cout << "printing low: " << low << endl << "printing high: " << high << endl;
+            for(int i = 0; i < 15; i++){
+                if (low == costArr[i]){
+
+                }
+                else if(high == costArr[i]){
+
+                }
+            }
+        }
     }
 
     void seats(int seats){
