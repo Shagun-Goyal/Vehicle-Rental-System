@@ -96,10 +96,12 @@ class searchingClass{
         if(actualCost == 0){
             for(int i = 0; i < 15; i++){
                 if (low == costArr[i]){
+                    cout << endl <<"========================================================" << endl << "     Car's info litlle low from the searched amount " << endl << "========================================================" << endl << endl;
                     Data input;
                     input.displayData(i);
                 }
                 else if(high == costArr[i]){
+                    cout << endl <<"========================================================" << endl << "     Car's info little more from the searched amount " << endl << "========================================================" << endl << endl;
                     Data input;
                     input.displayData(i);
                 }
