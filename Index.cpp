@@ -101,7 +101,7 @@ class searchingClass{
                     input.displayData(i);
                 }
                 else if(high == costArr[i]){
-                    cout << endl <<"========================================================" << endl << "     Car's info little more from the searched amount " << endl << "========================================================" << endl << endl;
+                    cout << endl <<"========================================================" << endl << "    Car's info little more from the searched amount " << endl << "========================================================" << endl << endl;
                     Data input;
                     input.displayData(i);
                 }
@@ -160,51 +160,77 @@ class searchingClass{
         if(temp != 0){
             int n = Temp.size();
             for(int i = 0; i < n; i++){
-                cout << "Temp: "<< Temp[i] << endl;
+                cout << endl <<"==========================================================" << endl << "     Car's info according to the number of seats" << endl << "==========================================================" << endl << endl;
+                Data input;
+                input.displayData(Temp[i]);
             }
         }
         else{
             int n = tempLow.size();
             int j = tempHigh.size();
             for(int i = 0; i < j; i++){
-                    cout << "Temp high: " << tempHigh[i] << endl;
+                cout << endl <<"=====================================================" << endl << "     Car's info according to the number of seats" << endl << "=====================================================" << endl << endl;
+                Data input;
+                input.displayData(tempHigh[i]);
             }
             for(int i = 0; i < n; i++){
-                cout << "Temp low: " << tempLow[i] << endl;
+                cout << endl <<"=====================================================" << endl << "     Car's info according to the number of seats" << endl << "=====================================================" << endl << endl;
+                Data input;
+                input.displayData(tempLow[i]);
             }
         }
     }
     void luxury(int luxury){
-        for (int i = 0; i < 3; i++){
             if(luxury == 1){
-                cout << "Premium" << endl;
-                break;
+                Data input;
+                input.displayData(0);
+                input.displayData(5);
+                input.displayData(6);
+                input.displayData(10);
+                input.displayData(11);
             }
             else if(luxury == 2){
-                cout << "Moderate" << endl;
-                break;
+                Data input;
+                input.displayData(1);
+                input.displayData(2);
+                input.displayData(7);
+                input.displayData(8);
+                input.displayData(12);
+                input.displayData(14);
             }
             else{
-                cout << "Low" << endl;
-                break;
+                Data input;
+                input.displayData(3);
+                input.displayData(4);
+                input.displayData(9);
+                input.displayData(13);
             }
-        }
     }
     void carType(int carstype){
-        for (int i = 0; i < 3; i++){
-           if(carstype == 1){
-                cout << "SUV" << endl;
-                break;
+           if(carstype == 2){
+                Data input;
+                input.displayData(0);
+                input.displayData(1);
+                input.displayData(2);
+                input.displayData(3);
+                input.displayData(4);
             }
-            else if(carstype == 2){
-                cout << "Sedan" << endl;
-                break;
+            else if(carstype == 1){
+                Data input;
+                input.displayData(5);
+                input.displayData(6);
+                input.displayData(7);
+                input.displayData(8);
+                input.displayData(9);
             }
             else{
-                cout << "Convertible" << endl;
-                break;
+                Data input;
+                input.displayData(10);
+                input.displayData(11);
+                input.displayData(12);
+                input.displayData(13);
+                input.displayData(14);
             } 
-        }
     }
 };
 
