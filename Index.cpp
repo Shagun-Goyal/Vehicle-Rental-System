@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 //#include "httplib.h"
 using namespace std;
 
@@ -14,12 +15,12 @@ class adminClass{
 
 };
 
-class data{
-    vector<string> cars;
-    vector<string> forDisplay;
+class Data{
+    vector <vector <string>> cars;
+    vector <string> forDisplay;
 
     public:
-    data() {
+    Data() {
         cars.push_back({"Skoda Octavia", "sedan", "premium", "3800", "5"});
         cars.push_back({"Toyota Camry", "sedan", "moderate", "3500", "5"});
         cars.push_back({"Honda Civic", "sedan", "moderate", "3200", "5"});
@@ -37,9 +38,21 @@ class data{
         cars.push_back({"BMW Z4", "convertible", "moderate", "12000", "2"});
         cars.push_back({"Mini Cooper Convertible", "convertible", "low", "10500", "4"});
         cars.push_back({"Ford Mustang Convertible", "convertible", "moderate", "11500", "4"});
+        forDisplay.push_back({"Cars's Name: "});
+        forDisplay.push_back({"Car Type: "});
+        forDisplay.push_back({"Luxury Level: "});
+        forDisplay.push_back({"Cost of car per day: "});
+        forDisplay.push_back({"Seats: "});
+
     }
-    data(int actualCost){
-        forDisplay.push_back
+
+    void displayData(int input){
+        //cout << "hello";
+        for(int i = 0; i < 5; i++){
+            cout << " " << forDisplay[i];
+            cout << cars[input][i] << endl;;
+        }
+        cout << endl;
     }
 
 
@@ -57,8 +70,9 @@ class searchingClass{
         if(cost == costArr[i]){
         //Have to dvelop to that condition where it return the all info about the related car if the user give the budget
             actualCost = costArr[i];
-            cout << "There your's car info related to your budget: " << actualCost << endl;
-            data(i);
+            cout << endl <<"======================================================" << endl << "     There your's car info related to your budget " << endl << "======================================================" << endl << endl;
+            Data a;
+            a.displayData(i);
             break;
         }
         else if(cost < costArr[i]){
@@ -80,13 +94,14 @@ class searchingClass{
         i++;
         }
         if(actualCost == 0){
-            cout << "printing low: " << low << endl << "printing high: " << high << endl;
             for(int i = 0; i < 15; i++){
                 if (low == costArr[i]){
-
+                    Data input;
+                    input.displayData(i);
                 }
                 else if(high == costArr[i]){
-
+                    Data input;
+                    input.displayData(i);
                 }
             }
         }
