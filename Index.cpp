@@ -15,6 +15,21 @@ class adminClass{
 
 };
 
+class Booking{
+    string mailId;
+    string password;
+    public:
+    Booking(){
+        cout << "Enter the Email Id: ";
+        cin >> mailId;
+        cout << "Enter the Password: ";
+        cin >> password;
+    }
+    void checking(){
+        
+    }
+
+}
 class Data{
     vector <vector <string>> cars;
     vector <string> forDisplay;
@@ -280,6 +295,15 @@ class customerClass{
     }
 };
 
+class Register {
+    string mailId;
+    string password;
+
+    public:
+    register(){
+
+    }
+}
 //Shows which type of user getting in
 class access {
     string registeredAs;
