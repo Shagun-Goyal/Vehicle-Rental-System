@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Data.h"
+#include <string>
+#include "Data.cpp"
 //#include "httplib.h"
 using namespace std;
 
@@ -17,22 +18,27 @@ class adminClass{
 };
 
 class Booking{
+    string name;
+    string phoneNo;
     string mailId;
     string password;
     public:
     Booking(){
+        cout << "Enter the Your name: ";
+        cin >> name;
+        cout << "Enter the Your phone number: ";
+        cin >> phoneNo;
         cout << "Enter the Email Id: ";
         cin >> mailId;
         cout << "Enter the Password: ";
         cin >> password;
-        Data saving;
-        //saving.
+        puttingData pushingData(name, phoneNo, mailId, password);
     }
     void checking(){
         
     }
 
-}
+};
 class Data{
     vector <vector <string>> cars;
     vector <string> forDisplay;
@@ -71,6 +77,7 @@ class Data{
             cout << cars[input][i] << endl;;
         }
         cout << endl;
+        Booking obj1;
     }
 
 
@@ -299,14 +306,8 @@ class customerClass{
 };
 
 class Register {
-    string mailId;
-    string password;
 
-    public:
-    register(){
-
-    }
-}
+};
 //Shows which type of user getting in
 class access {
     string registeredAs;
