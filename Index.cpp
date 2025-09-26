@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <string>
 #include "Data.h"
 //#include "httplib.h"
 using namespace std;
@@ -17,16 +18,22 @@ class adminClass{
 };
 
 class Booking{
+    string name;
+    string phoneNo;
     string mailId;
     string password;
     public:
     Booking(){
+        cout << "Enter the Your name: ";
+        cin >> name;
+        cout << "Enter the Your phone numner: ";
+        cin >> phoneNo;
         cout << "Enter the Email Id: ";
         cin >> mailId;
         cout << "Enter the Password: ";
         cin >> password;
-        Data saving;
-        //saving.
+        Data pushingData;
+        pushingData(name, phoneNo, mailId, password);
     }
     void checking(){
         
