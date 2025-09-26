@@ -25,6 +25,8 @@ class Booking{
         cin >> mailId;
         cout << "Enter the Password: ";
         cin >> password;
+        Data saving;
+        //saving.
     }
     void checking(){
         
