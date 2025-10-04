@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <string>
 #include "Data.cpp"
 //#include "httplib.h"
 using namespace std;
@@ -34,8 +33,12 @@ class Details{
         cin >> password;
         puttingData pushingData(name, phoneNo, mailId, password);
     }
-    void checking(){
-        
+    void booking(){
+        string tempname;
+        cout << "Which car you want to book" << endl << "please enter the name of the car" << endl;
+        cin >> tempname;
+        cout << "Your car " << tempname << " is booked" << endl;
+        adminClass calling;
     }
 
 };
@@ -121,7 +124,7 @@ class searchingClass{
         if(actualCost == 0){
             for(int i = 0; i < 15; i++){
                 if (low == costArr[i]){
-                    cout << endl <<"========================================================" << endl << "     Car's info litlle cheapsh from the searched amount " << endl << "========================================================" << endl << endl;
+                    cout << endl <<"========================================================" << endl << "     Car's info litlle cheap from the searched amount " << endl << "========================================================" << endl << endl;
                     Data input;
                     input.displayData(i);
                 }
