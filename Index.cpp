@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <string>
 #include "Data.cpp"
 //#include "httplib.h"
 using namespace std;
@@ -17,13 +16,13 @@ class adminClass{
 
 };
 
-class Booking{
+class Details{
     string name;
     string phoneNo;
     string mailId;
     string password;
     public:
-    Booking(){
+    Details(){
         cout << "Enter the Your name: ";
         cin >> name;
         cout << "Enter the Your phone number: ";
@@ -34,8 +33,12 @@ class Booking{
         cin >> password;
         puttingData pushingData(name, phoneNo, mailId, password);
     }
-    void checking(){
-        
+    void booking(){
+        string tempname;
+        cout << "Which car you want to book" << endl << "please enter the name of the car" << endl;
+        cin >> tempname;
+        cout << "Your car " << tempname << " is booked" << endl;
+        adminClass calling;
     }
 
 };
@@ -77,7 +80,6 @@ class Data{
             cout << cars[input][i] << endl;;
         }
         cout << endl;
-        Booking obj1;
     }
 
 
@@ -98,6 +100,7 @@ class searchingClass{
             cout << endl <<"======================================================" << endl << "     There your's car info related to your budget " << endl << "======================================================" << endl << endl;
             Data a;
             a.displayData(i);
+            Details obj1;
             break;
         }
         else if(cost < costArr[i]){
@@ -121,16 +124,17 @@ class searchingClass{
         if(actualCost == 0){
             for(int i = 0; i < 15; i++){
                 if (low == costArr[i]){
-                    cout << endl <<"========================================================" << endl << "     Car's info litlle low from the searched amount " << endl << "========================================================" << endl << endl;
+                    cout << endl <<"========================================================" << endl << "     Car's info litlle cheap from the searched amount " << endl << "========================================================" << endl << endl;
                     Data input;
                     input.displayData(i);
                 }
                 else if(high == costArr[i]){
-                    cout << endl <<"========================================================" << endl << "    Car's info little more from the searched amount " << endl << "========================================================" << endl << endl;
+                    cout << endl <<"========================================================" << endl << "    Car's info little expensive from the searched amount " << endl << "========================================================" << endl << endl;
                     Data input;
                     input.displayData(i);
                 }
             }
+            Details obj1;
         }
     }
 
@@ -188,6 +192,7 @@ class searchingClass{
                 cout << endl <<"==========================================================" << endl << "     Car's info according to the number of seats" << endl << "==========================================================" << endl << endl;
                 Data input;
                 input.displayData(Temp[i]);
+                Details obj1;
             }
         }
         else{
@@ -203,6 +208,7 @@ class searchingClass{
                 Data input;
                 input.displayData(tempLow[i]);
             }
+            Details obj1;
         }
     }
     void luxury(int luxury){
@@ -213,6 +219,7 @@ class searchingClass{
                 input.displayData(6);
                 input.displayData(10);
                 input.displayData(11);
+                Details obj1;
             }
             else if(luxury == 2){
                 Data input;
@@ -222,6 +229,7 @@ class searchingClass{
                 input.displayData(8);
                 input.displayData(12);
                 input.displayData(14);
+                Details obj1;
             }
             else{
                 Data input;
@@ -229,6 +237,7 @@ class searchingClass{
                 input.displayData(4);
                 input.displayData(9);
                 input.displayData(13);
+                Details obj1;
             }
     }
     void carType(int carstype){
@@ -239,6 +248,7 @@ class searchingClass{
                 input.displayData(2);
                 input.displayData(3);
                 input.displayData(4);
+                Details obj1;
             }
             else if(carstype == 1){
                 Data input;
@@ -247,6 +257,7 @@ class searchingClass{
                 input.displayData(7);
                 input.displayData(8);
                 input.displayData(9);
+                Details obj1;
             }
             else{
                 Data input;
@@ -255,6 +266,7 @@ class searchingClass{
                 input.displayData(12);
                 input.displayData(13);
                 input.displayData(14);
+                Details obj1;
             } 
     }
 };
