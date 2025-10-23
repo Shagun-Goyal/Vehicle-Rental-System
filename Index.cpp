@@ -11,8 +11,23 @@ struct carsInfo{
     int cost;
     int seats;
 };
-//Class For Admin Login(Idea: Can include the booking for the admin in low costs)
+
+// Simple admin class with authentication
 class adminClass{
+    const string adminUser = "admin";
+    const string adminPass = "password123"; // change as needed
+public:
+    bool authenticate(){
+        cout << "Enter admin username: ";
+        string u; cin >> u;
+        cout << "Enter admin password: ";
+        string p; cin >> p;
+        return (u == adminUser && p == adminPass);
+    }
+
+    void showBookings(){
+        BookingManager::displayAllBookings();
+    }
 
 };
 
@@ -37,8 +52,15 @@ class Details{
         string tempname;
         cout << "Which car you want to book" << endl << "please enter the name of the car" << endl;
         cin >> tempname;
-        cout << "Your car " << tempname << " is booked" << endl;
-        adminClass calling;
+        cout << "Enter booking date (YYYY-MM-DD): ";
+        string date; cin >> date;
+        cout << "Enter booking time (HH:MM): ";
+        string time; cin >> time;
+
+        // record booking
+        BookingManager::addBooking(name, phoneNo, tempname, date, time);
+
+        cout << "Your car " << tempname << " is booked on " << date << " at " << time << "\n";
     }
 
 };
@@ -101,6 +123,7 @@ class searchingClass{
             Data a;
             a.displayData(i);
             Details obj1;
+            obj1.booking();
             break;
         }
         else if(cost < costArr[i]){
@@ -135,6 +158,7 @@ class searchingClass{
                 }
             }
             Details obj1;
+            obj1.booking();
         }
     }
 
@@ -193,6 +217,7 @@ class searchingClass{
                 Data input;
                 input.displayData(Temp[i]);
                 Details obj1;
+                obj1.booking();
             }
         }
         else{
@@ -209,6 +234,7 @@ class searchingClass{
                 input.displayData(tempLow[i]);
             }
             Details obj1;
+            obj1.booking();
         }
     }
     void luxury(int luxury){
@@ -220,6 +246,7 @@ class searchingClass{
                 input.displayData(10);
                 input.displayData(11);
                 Details obj1;
+                obj1.booking();
             }
             else if(luxury == 2){
                 Data input;
@@ -230,6 +257,7 @@ class searchingClass{
                 input.displayData(12);
                 input.displayData(14);
                 Details obj1;
+                obj1.booking();
             }
             else{
                 Data input;
@@ -238,6 +266,7 @@ class searchingClass{
                 input.displayData(9);
                 input.displayData(13);
                 Details obj1;
+                obj1.booking();
             }
     }
     void carType(int carstype){
@@ -249,6 +278,7 @@ class searchingClass{
                 input.displayData(3);
                 input.displayData(4);
                 Details obj1;
+                obj1.booking();
             }
             else if(carstype == 1){
                 Data input;
@@ -258,6 +288,7 @@ class searchingClass{
                 input.displayData(8);
                 input.displayData(9);
                 Details obj1;
+                obj1.booking();
             }
             else{
                 Data input;
@@ -267,6 +298,7 @@ class searchingClass{
                 input.displayData(13);
                 input.displayData(14);
                 Details obj1;
+                obj1.booking();
             } 
     }
 };
@@ -343,6 +375,12 @@ class access {
     void checking(){
         if(registeredAs == "admin"){
             adminClass login;
+            if(login.authenticate()){
+                cout << "\nAdmin view: Bookings\n";
+                login.showBookings();
+            } else {
+                cout << "Authentication failed. Access denied." << endl;
+            }
         }
 
         else if(registeredAs == "customer"){
@@ -378,4 +416,7 @@ int main (){
     access accessManager;
     accessManager.Sizing();
     accessManager.checking();
+    access accessManager2;
+    accessManager2.Sizing();
+    accessManager2.checking();
 }
